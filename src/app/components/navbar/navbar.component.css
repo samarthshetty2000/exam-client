@@ -1,0 +1,9 @@
+.example-spacer {
+
+  width: 40%;
+    flex:1 1 auto;
+    flex-basis:auto;
+  }
+  
+  .fit{width: fit-content;}
+  

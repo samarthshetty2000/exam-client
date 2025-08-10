@@ -1,0 +1,44 @@
+<div class="bootstrap-wrapper">
+    <div class="row"><div class="col-md-12">
+        <mat-card class="mt20" *ngIf="quiz">
+            <mat-card-header>
+               <mat-card-title>
+                Read the Instructions carefully
+               </mat-card-title>
+               <mat-card-subtitle>
+                One step more to go!!              
+             </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content class="ml20">
+                <h1>{{quiz.title}}</h1>
+                <p>{{quiz.description}}</p>
+                <mat-divider></mat-divider>
+                <br>
+                <h1>Important Instructions</h1>
+                <ul>
+                    <li>This quiz is for practice purpose.</li>
+                    <li>You have to submit Quiz within <b>{{quiz.numberOfQuestions*2}} minutes</b> .</li>
+                    <li>You can Attempt quiz any number of time.</li>
+                    <li>There are  <b>{{quiz.numberOfQuestions}}</b>  in this quiz.</li>
+                    <li>Each question carries <b>{{quiz.maxMarks/quiz.numberOfQuestions}}</b>.</li>
+                    <li>All question are of MCQ type.</li>
+                </ul>
+                <mat-divider></mat-divider>
+                <br>
+                <h1>Attempting Quiz</h1>
+                    <ul>
+                    <li>Click <b>start</b> button to start quiz</li>
+                    <li>You cannot resume quiz</li>
+                    <li>Report will be generated automatically in pdf format</li>
+                    </ul>
+
+            </mat-card-content>
+            <mat-card-actions class="text-center">
+
+                <button mat-raised-button color="accent"  (click)="startQuiz()" >START QUIZ</button>
+
+
+            </mat-card-actions>
+        </mat-card>
+    </div></div>
+</div>
