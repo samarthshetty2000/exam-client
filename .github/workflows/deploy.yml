@@ -52,4 +52,4 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/angular-app:latest
             sudo docker stop angular-container || true
             sudo docker rm angular-container || true
-            sudo docker run -d -p 4200:4200 --name angular-container ${{ secrets.DOCKER_USERNAME }}/angular-app:latest
+            sudo docker run -d -p 80:4200 --name angular-container ${{ secrets.DOCKER_USERNAME }}/angular-app:latest
